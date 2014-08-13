@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-fpDir = File.expand_path "/usr/local/lib/foodProcessor"
+fpDir = File.expand_path "/app"
 
 ENV['BUNDLE_GEMFILE'] ||= fpDir + "/Gemfile"
 $:.unshift fpDir
