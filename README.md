@@ -1,8 +1,8 @@
 # foodProcessor
 
-## a static recipe-website creator
+a static recipe-website creator
 
-### installation
+## installation
 
 There are two methods to install:
 
@@ -19,13 +19,27 @@ There are two methods to install:
   - Run: `foodProcessor INPUT_DIR OUTPUT_DIR`
   - I recommend setting this up as a post-recieve hook, and having your recipes as a git repo
 
-### recipe files
+## the recipe repo
+
+```
+- /recipes
+  |
+  |__ *.recipe
+  |
+  |__ /layouts
+     |
+     |__ layout.haml
+     |__ index.haml
+     |__ recipe.haml
+```
+
+## recipe files
 
 The recipe file itself is based on YAML, and is intended to make transcription of recipes as quick as possible.
 
 An example recipe template is included and commented in the repo.
 
-### HTML templates
+## HTML templates
 
 foodProcessor will look for three files when writing the site:
 
@@ -42,9 +56,9 @@ foodProcessor will look for three files when writing the site:
     - `recipe.name`: the name string provided in the recipe file
     - `recipe.html`: the recipe file, pre-rendered into HTML
 
-#### example templates
+### example templates
 
-##### layout.haml
+#### layout.haml
 
 ```
 !!!
@@ -61,7 +75,7 @@ foodProcessor will look for three files when writing the site:
       =yield
 ```
 
-##### index.haml
+#### index.haml
 
 ```
 %h1 awesome recipes
@@ -71,7 +85,7 @@ foodProcessor will look for three files when writing the site:
       %a{href: "recipes/#{recipe.name}.html"}= recipe.name
 ```
 
-##### recipe.haml
+#### recipe.haml
 
 ```
 %h2= recipe.name
