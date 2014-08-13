@@ -1,0 +1,23 @@
+---
+name: recipe name goes here
+ingredients:
+  # abbreviations are supported for
+    # c -> cups
+    # t -> teaspoons
+    # T -> tablespoons
+    # ml -> milliliters
+    # g -> grams
+    # p -> no measure 'type', like 1 egg
+    # hectares -> anything unknown will just be processed as-is
+  ingredients: 2.5 c
+  go: 1 c
+  here: 3.5 t
+  spaces are fine: 1 t
+  "Anything can go in quotes **this is bold with two asterisks around it** and *this is in italics*. An exclamation mark denotes this type.": !
+instructions:
+  - "In a shallow dish, mix together the egg and juice of 1/2 lemon. In another, mix flour, and other things. Dip food in egg mix then flour mix. Heat butter in large skillet over medium heat. Add food, do things."
+  - "
+  1. This is processed as markdown.
+  \n2. So you can do fancy (but ugly) things like this to get numbered lists.
+  \n3. I'm working on a less horrible way of doing this.
+  "

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+fpDir = File.expand_path "/usr/local/lib/foodProcessor"
+
+ENV['BUNDLE_GEMFILE'] ||= fpDir + "/Gemfile"
+$:.unshift fpDir
+
+require 'bundler/setup'
+require 'foodprocessor'
+
+FoodProcessor.go ARGV[0], ARGV[1]
