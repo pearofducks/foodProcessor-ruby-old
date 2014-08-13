@@ -21,6 +21,8 @@ There are two methods to install:
 
 ## the recipe repo
 
+The following is the structure foodProcessor expects for the INPUT_DIR mentioned above.
+
 ```
 - /recipes
   |
